@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Now | MEO Care Organization</title>
+  <meta name="description" content="Your kindness can change lives. Support vulnerable families and animals in need through MeoCare's humanitarian initiatives.">
+  
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts (Playfair Display & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS (Local with CDN fallback) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" onerror="this.onerror=null;">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-shield-heart-fill text-sage"></i>
+        <span>A Better World Begins With Compassion.</span>
+      </div>
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <a href="transparency.html"><i class="bi bi-lock me-1"></i>Transparency & Accountability</a>
+        <span class="text-white-50">|</span>
+        <a href="volunteer.html"><i class="bi bi-people me-1"></i>Volunteer With Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Navigation (Redesigned Premium Nonprofit Navbar) -->
+  <nav class="navbar navbar-expand-xl navbar-custom sticky-top" id="mainNavbar" aria-label="Main Navigation">
+    <div class="container">
+      <!-- Official MEO Care Logo (Original 2:1 Proportions) -->
+      <a class="navbar-brand" href="index.html" aria-label="MEO Care Organization Home">
+        <img src="images/logo.png" alt="MEO Care Organization Logo" class="brand-logo" width="130" height="48">
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="navbar-toggler border-0 shadow-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar bar-1"></span>
+        <span class="toggler-bar bar-2"></span>
+        <span class="toggler-bar bar-3"></span>
+      </button>
+
+      <!-- Navigation Links & Dropdowns -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto align-items-xl-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>About</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="aboutDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">
+                  <span class="item-title">About MeoCare</span>
+                  <span class="item-desc">Our mission, vision, and core purpose</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="about.html#values">
+                  <span class="item-title">Our Values</span>
+                  <span class="item-desc">6 ethical commitments guiding our work</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="transparency.html">
+                  <span class="item-title">Transparency & Accountability</span>
+                  <span class="item-desc">Open governance, reports, and promise</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="policies.html">
+                  <span class="item-title">Policies & Governance</span>
+                  <span class="item-desc">Privacy, safeguarding, and donation terms</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>Programs</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="programsDropdown">
+              <li>
+                <a class="dropdown-item" href="programs.html">
+                  <span class="item-title">All Programs Overview</span>
+                  <span class="item-desc">Comprehensive relief & welfare overview</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#food-assistance">
+                  <span class="item-title">Food Assistance & Humanitarian Aid</span>
+                  <span class="item-desc">Nourishing vulnerable families in need</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#animal-welfare">
+                  <span class="item-title">Animal Rescue & Welfare</span>
+                  <span class="item-desc">Rescue, food, veterinary treatment & shelter</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#community-partnerships">
+                  <span class="item-title">Community Partnerships</span>
+                  <span class="item-desc">CSR, institutional collaboration & in-kind aid</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Our Impact -->
+          <li class="nav-item">
+            <a class="nav-link" href="impact.html">Our Impact</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>Get Involved</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="getInvolvedDropdown">
+              <li>
+                <a class="dropdown-item" href="volunteer.html">
+                  <span class="item-title">Ways to Get Involved</span>
+                  <span class="item-desc">Community support & volunteer avenues</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="volunteer.html#volunteer-form-section">
+                  <span class="item-title">Become a Volunteer</span>
+                  <span class="item-desc">Lend your time, care, or professional skills</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="volunteer.html#partner">
+                  <span class="item-title">Partner With Us</span>
+                  <span class="item-desc">Corporate partnerships & joint initiatives</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item active" href="donate.html">
+                  <span class="item-title">Ways to Give</span>
+                  <span class="item-desc">One-time, monthly, and in-kind giving options</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- News -->
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right Side: Prominent Tasteful Donate Now Button -->
+        <div class="navbar-cta d-flex align-items-center">
+          <a class="btn btn-navbar-donate" href="donate.html">
+            <i class="bi bi-heart-fill me-1" aria-hidden="true"></i>
+            <span>Donate Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Hero -->
+    <!-- Page Header Hero (Clean Premium Split Layout: Donate) -->
+  <header class="page-hero page-hero-donate">
+    <div class="page-hero-bg"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <!-- Left Side: Narrative, CTAs & Impact Highlights -->
+        <div class="col-lg-6 hero-page-left fade-in-on-scroll">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb breadcrumb-custom">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Donate</li>
+            </ol>
+          </nav>
+          <span class="eyebrow eyebrow-white mb-2">
+            <i class="bi bi-heart-fill text-terracotta"></i> 100% Impact Commitment
+          </span>
+          <h1 class="display-5 text-white fw-bold mb-3">
+            Your Kindness Can Change Lives
+          </h1>
+          <p class="fs-5 text-white-50 mb-4 leading-relaxed">
+            Every contribution directly provides food rations for vulnerable families and medical rescue care for injured animals. Help us deliver compassion where it is needed most.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#donation-form" class="btn btn-terracotta btn-lg">
+              <i class="bi bi-heart-fill me-1"></i> Make a Donation
+            </a>
+            <a href="transparency.html" class="btn btn-outline-light-custom btn-lg">
+              <i class="bi bi-shield-check me-1"></i> Transparency Promise
+            </a>
+          </div>
+          <div class="hero-impact-guarantee">
+            <span class="hero-impact-pill">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Direct Distribution
+            </span>
+            <span class="hero-impact-pill">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Verified Audits
+            </span>
+            <span class="hero-impact-pill">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> 100% Honest Reporting
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Side: Master Photo Card with Fund Breakdown -->
+        <div class="col-lg-6 fade-in-on-scroll delay-1">
+          <div class="page-hero-master-card" role="region" aria-label="MeoCare Donation Impact Spotlight">
+            <div class="page-hero-img-wrap">
+              <img src="images/Small Donations, Big Difference.png" alt="Compassionate humanitarian kindness and community support" loading="eager">
+              <span class="page-hero-badge"><i class="bi bi-heart-fill text-terracotta me-1"></i> 100% Reaches Beneficiaries</span>
+              <span class="page-hero-stat-pill"><i class="bi bi-shield-check text-terracotta me-1"></i> Verified Relief</span>
+            </div>
+            <div class="page-hero-card-footer">
+              <div class="page-hero-stat-item">
+                <span class="stat-num text-terracotta">Food Aid</span>
+                <span class="stat-lbl">Family Ration Kits</span>
+              </div>
+              <div class="page-hero-stat-item">
+                <span class="stat-num text-white">Animal Care</span>
+                <span class="stat-lbl">Rescue &amp; Healing</span>
+              </div>
+              <div class="page-hero-stat-item">
+                <span class="stat-num text-gold-muted">Zero Waste</span>
+                <span class="stat-lbl">Responsible Use</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Giving Main Section -->
+  <section class="section-padding bg-section-donate">
+    <div class="container">
+
+
+      <div class="row g-5">
+        <!-- Interactive Donation Selector (Left / Center) -->
+        <div class="col-lg-8 fade-in-on-scroll">
+          <div class="card p-4 p-md-5 rounded-4 bg-white border-0 shadow-sm">
+            
+            <h3 class="h3 text-forest-deep mb-2">Choose Where Your Donation Goes</h3>
+            <p class="text-muted small mb-4">
+              Your generosity can help provide food, support humanitarian initiatives, and assist animal welfare activities. Whether you choose to make a one-time contribution or provide ongoing support, your participation matters.
+            </p>
+
+            <!-- Giving Frequency Selector -->
+            <div class="mb-4">
+              <label class="form-label d-block text-forest">Giving Frequency</label>
+              <div class="row g-2">
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="w-100 giving-type-btn active" data-frequency="One-Time">
+                    One-Time
+                  </button>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="w-100 giving-type-btn" data-frequency="Monthly">
+                    Monthly
+                  </button>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="w-100 giving-type-btn" data-frequency="Corporate">
+                    Corporate
+                  </button>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="w-100 giving-type-btn" data-frequency="In-Kind">
+                    In-Kind
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Program Fund Allocation -->
+            <div class="mb-4">
+              <label class="form-label d-block text-forest">Select Program Allocation</label>
+              <div class="row g-3">
+                <!-- Option 1: Feed a Family -->
+                <div class="col-md-4">
+                  <div class="giving-fund-card selected" data-fund-name="Feed a Family">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <i class="bi bi-basket2-fill text-forest fs-4"></i>
+                      <input type="radio" name="donationFund" value="Feed a Family" checked>
+                    </div>
+                    <h6 class="fw-bold text-forest mb-1">Feed a Family</h6>
+                    <p class="text-muted small mb-0">Help support food assistance initiatives for vulnerable families needing essential supplies.</p>
+                  </div>
+                </div>
+
+                <!-- Option 2: Rescue & Care for Animals -->
+                <div class="col-md-4">
+                  <div class="giving-fund-card" data-fund-name="Rescue & Care for Animals">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <i class="bi bi-heart-pulse-fill text-terracotta fs-4"></i>
+                      <input type="radio" name="donationFund" value="Rescue & Care for Animals">
+                    </div>
+                    <h6 class="fw-bold text-forest mb-1">Rescue & Care for Animals</h6>
+                    <p class="text-muted small mb-0">Support food, veterinary assistance, rescue-related needs, and rehabilitation where available.</p>
+                  </div>
+                </div>
+
+                <!-- Option 3: General Mission -->
+                <div class="col-md-4">
+                  <div class="giving-fund-card" data-fund-name="General Mission">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <i class="bi bi-globe-americas text-sage fs-4"></i>
+                      <input type="radio" name="donationFund" value="General Mission">
+                    </div>
+                    <h6 class="fw-bold text-forest mb-1">Support General Mission</h6>
+                    <p class="text-muted small mb-0">Contribute toward broader humanitarian and animal welfare according to fund-allocation policy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amount Selection -->
+            <form id="demoDonationForm" novalidate>
+              <div class="mb-4">
+                <label class="form-label text-forest" for="customAmountInput">Select Donation Amount (USD)</label>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <button type="button" class="btn btn-outline-forest btn-amount-preset" data-amount="25">$25</button>
+                  <button type="button" class="btn btn-forest text-white btn-amount-preset" data-amount="50">$50</button>
+                  <button type="button" class="btn btn-outline-forest btn-amount-preset" data-amount="100">$100</button>
+                  <button type="button" class="btn btn-outline-forest btn-amount-preset" data-amount="250">$250</button>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text bg-light text-forest fw-bold">$</span>
+                  <input type="number" id="customAmountInput" name="customAmount" class="form-control" placeholder="Or enter custom amount" value="50" min="1" step="any" required>
+                </div>
+              </div>
+
+              <!-- Supporter Information -->
+              <div class="p-3 bg-sage-tint rounded-3 mb-4">
+                <h6 class="text-forest fw-bold mb-2"><i class="bi bi-person-circle me-1"></i> Supporter Information</h6>
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <label class="form-label small text-forest fw-semibold mb-1" for="donorName">Your Full Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-sm" id="donorName" name="donorName" placeholder="e.g. Tariq Mehmood" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label small text-forest fw-semibold mb-1" for="donorEmail">Your Email Address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control form-control-sm" id="donorEmail" name="donorEmail" placeholder="e.g. tariq@example.com" required>
+                  </div>
+                </div>
+                <small class="text-muted d-block mt-2">
+                  <i class="bi bi-shield-lock"></i> Your information is held securely and treated with complete confidentiality.
+                </small>
+              </div>
+
+              <!-- Summary & Submit -->
+              <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between p-3 bg-cream rounded-3 border mb-4 gap-3">
+                <div>
+                  <span class="small text-muted d-block">Your Contribution:</span>
+                  <strong class="text-forest" id="selectedFrequencyText">One-Time</strong> contribution of <strong class="text-forest" id="summaryAmountText">$50</strong> to <strong class="text-terracotta" id="summaryFundText">Feed a Family</strong>
+                </div>
+                <button type="submit" class="btn btn-terracotta btn-lg flex-shrink-0">
+                  <i class="bi bi-heart-fill"></i> Donate Now
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Transparency & Giving Information (Right Sidebar) -->
+        <div class="col-lg-4 fade-in-on-scroll delay-1">
+          <!-- Make a Difference Your Way -->
+          <div class="card p-4 rounded-4 bg-white border-0 shadow-sm mb-4">
+            <h4 class="h5 text-forest mb-3"><i class="bi bi-stars text-terracotta me-1"></i> Make a Difference Your Way</h4>
+            <ul class="list-unstyled mb-0 small">
+              <li class="mb-3 pb-2 border-bottom">
+                <strong class="text-forest d-block">One-Time Donation:</strong>
+                <span class="text-muted">Make a contribution whenever you can to meet urgent relief needs.</span>
+              </li>
+              <li class="mb-3 pb-2 border-bottom">
+                <strong class="text-forest d-block">Monthly Giving:</strong>
+                <span class="text-muted">Help provide more consistent support for our ongoing humanitarian and animal rescue initiatives.</span>
+              </li>
+              <li class="mb-3 pb-2 border-bottom">
+                <strong class="text-forest d-block">Corporate Giving:</strong>
+                <span class="text-muted">Partner with MeoCare through corporate contributions, sponsorships, or CSR programs.</span>
+              </li>
+              <li class="mb-0">
+                <strong class="text-forest d-block">In-Kind Donations:</strong>
+                <span class="text-muted">Support eligible initiatives through food supplies, animal care items, or other approved resources.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Donation Transparency -->
+          <div class="card p-4 rounded-4 bg-sage-tint border-0 mb-4">
+            <h4 class="h5 text-forest mb-2"><i class="bi bi-shield-check text-forest me-1"></i> Donation Transparency</h4>
+            <p class="small text-forest-mid mb-3">
+              We believe every donor deserves clarity and confidence. MeoCare aims to maintain appropriate records of donations and expenditure, explain how contributions are allocated, and share verified program updates and financial information as available.
+            </p>
+            <p class="small text-muted mb-3">
+              Before making a donation, please review our donation policy and the details of the relevant campaign.
+            </p>
+            <a href="policies.html#donation" class="btn btn-outline-forest btn-sm">
+              <i class="bi bi-file-earmark-text"></i> Read Donation Policy
+            </a>
+          </div>
+
+          <!-- Important Donation Information -->
+          <div class="card p-4 rounded-4 bg-white border border-warning border-opacity-50">
+            <h5 class="h6 text-terracotta text-uppercase fw-bold mb-2">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i> Important Information
+            </h5>
+            <p class="small text-muted mb-3">
+              Donation methods, international payment options, receipts, and any applicable tax treatment will be provided only after the relevant arrangements and requirements have been verified.
+            </p>
+            <a href="contact.html" class="btn btn-outline-forest btn-sm w-100">
+              <i class="bi bi-envelope"></i> Contact Us About Giving
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block">
+            <img src="images/logo.png" alt="MEO Care Organization Logo" class="footer-logo">
+          </a>
+          <p class="text-white fw-semibold mb-2">A Better World Begins With Compassion.</p>
+          <p class="text-white-50 small mb-4">
+            Supporting vulnerable families through food assistance and promoting animal welfare through compassionate care, responsible action, and community partnerships.
+          </p>
+          <div class="footer-disclaimer-box">
+            <small>
+              MeoCare is committed to responsible humanitarian assistance, animal welfare, and transparent communication. Organizational registration, donation eligibility, and tax-related information will be published only when verified and applicable.
+            </small>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="programs.html"><i class="bi bi-chevron-right"></i> Our Programs</a></li>
+            <li><a href="impact.html"><i class="bi bi-chevron-right"></i> Our Impact</a></li>
+            <li><a href="news.html"><i class="bi bi-chevron-right"></i> News & Stories</a></li>
+            <li><a href="transparency.html"><i class="bi bi-chevron-right"></i> Transparency</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Our Focus</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html#food-assistance"><i class="bi bi-basket2"></i> Food Assistance</a></li>
+            <li><a href="programs.html#animal-welfare"><i class="bi bi-heart-pulse"></i> Animal Welfare</a></li>
+            <li><a href="programs.html#community-partnerships"><i class="bi bi-handshake"></i> Partnerships</a></li>
+            <li><a href="donate.html"><i class="bi bi-heart"></i> Donate Now</a></li>
+            <li><a href="volunteer.html"><i class="bi bi-people"></i> Become a Volunteer</a></li>
+            <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-links mb-3">
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Email:</strong>
+              <span class="placeholder-pill">[Insert Official Email Address]</span>
+            </li>
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Phone:</strong>
+              <span class="placeholder-pill">[Insert Official Contact Number]</span>
+            </li>
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Office Address:</strong>
+              <span class="placeholder-pill">[Insert Verified Office Address]</span>
+            </li>
+          </ul>
+
+          <h5 class="text-white fs-6 mt-3 mb-2">Governance & Policies</h5>
+          <ul class="footer-links small">
+            <li><a href="policies.html#privacy"><i class="bi bi-shield-lock"></i> Privacy Policy</a></li>
+            <li><a href="policies.html#donation"><i class="bi bi-file-text"></i> Donation Policy</a></li>
+            <li><a href="policies.html#safeguarding"><i class="bi bi-heart"></i> Safeguarding Policy</a></li>
+            <li><a href="policies.html#complaints"><i class="bi bi-chat-left-text"></i> Complaints & Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">
+          &copy; <span class="placeholder-pill">[Insert Current Year]</span> (<span class="current-year-text">2026</span>) MeoCare. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btnScrollTop" class="btn-scroll-top" aria-label="Scroll to top of page">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

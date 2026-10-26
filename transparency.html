@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparency & Accountability | MEO Care Organization</title>
+  <meta name="description" content="Trust is built through responsible action. Explore MeoCare's commitments, report archives, and governance policies.">
+  
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts (Playfair Display & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS (Local with CDN fallback) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" onerror="this.onerror=null;">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-shield-heart-fill text-sage"></i>
+        <span>A Better World Begins With Compassion.</span>
+      </div>
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <a href="transparency.html"><i class="bi bi-lock me-1"></i>Transparency & Accountability</a>
+        <span class="text-white-50">|</span>
+        <a href="volunteer.html"><i class="bi bi-people me-1"></i>Volunteer With Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Navigation (Redesigned Premium Nonprofit Navbar) -->
+  <nav class="navbar navbar-expand-xl navbar-custom sticky-top" id="mainNavbar" aria-label="Main Navigation">
+    <div class="container">
+      <!-- Official MEO Care Logo (Original 2:1 Proportions) -->
+      <a class="navbar-brand" href="index.html" aria-label="MEO Care Organization Home">
+        <img src="images/logo.png" alt="MEO Care Organization Logo" class="brand-logo" width="130" height="48">
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="navbar-toggler border-0 shadow-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar bar-1"></span>
+        <span class="toggler-bar bar-2"></span>
+        <span class="toggler-bar bar-3"></span>
+      </button>
+
+      <!-- Navigation Links & Dropdowns -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto align-items-xl-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- About Dropdown (Active via Transparency) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>About</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="aboutDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">
+                  <span class="item-title">About MeoCare</span>
+                  <span class="item-desc">Our mission, vision, and core purpose</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="about.html#values">
+                  <span class="item-title">Our Values</span>
+                  <span class="item-desc">6 ethical commitments guiding our work</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item active" href="transparency.html">
+                  <span class="item-title">Transparency & Accountability</span>
+                  <span class="item-desc">Open governance, reports, and promise</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="policies.html">
+                  <span class="item-title">Policies & Governance</span>
+                  <span class="item-desc">Privacy, safeguarding, and donation terms</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>Programs</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="programsDropdown">
+              <li>
+                <a class="dropdown-item" href="programs.html">
+                  <span class="item-title">All Programs Overview</span>
+                  <span class="item-desc">Comprehensive relief & welfare overview</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#food-assistance">
+                  <span class="item-title">Food Assistance & Humanitarian Aid</span>
+                  <span class="item-desc">Nourishing vulnerable families in need</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#animal-welfare">
+                  <span class="item-title">Animal Rescue & Welfare</span>
+                  <span class="item-desc">Rescue, food, veterinary treatment & shelter</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#community-partnerships">
+                  <span class="item-title">Community Partnerships</span>
+                  <span class="item-desc">CSR, institutional collaboration & in-kind aid</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Our Impact -->
+          <li class="nav-item">
+            <a class="nav-link" href="impact.html">Our Impact</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>Get Involved</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="getInvolvedDropdown">
+              <li>
+                <a class="dropdown-item" href="volunteer.html">
+                  <span class="item-title">Ways to Get Involved</span>
+                  <span class="item-desc">Community support & volunteer avenues</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="volunteer.html#volunteer-form-section">
+                  <span class="item-title">Become a Volunteer</span>
+                  <span class="item-desc">Lend your time, care, or professional skills</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="volunteer.html#partner">
+                  <span class="item-title">Partner With Us</span>
+                  <span class="item-desc">Corporate partnerships & joint initiatives</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="donate.html">
+                  <span class="item-title">Ways to Give</span>
+                  <span class="item-desc">One-time, monthly, and in-kind giving options</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- News -->
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right Side: Prominent Tasteful Donate Now Button -->
+        <div class="navbar-cta d-flex align-items-center">
+          <a class="btn btn-navbar-donate" href="donate.html">
+            <i class="bi bi-heart-fill me-1" aria-hidden="true"></i>
+            <span>Donate Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Hero -->
+    <!-- Page Header Hero (Clean Premium Split Layout: Transparency) -->
+  <header class="page-hero page-hero-transparency">
+    <div class="page-hero-bg"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <!-- Left Side: Narrative, CTAs & Governance Guarantees -->
+        <div class="col-lg-6 hero-page-left fade-in-on-scroll">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb breadcrumb-custom">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Transparency &amp; Accountability</li>
+            </ol>
+          </nav>
+          <span class="eyebrow eyebrow-white mb-2">
+            <i class="bi bi-shield-lock-fill text-terracotta"></i> Open Governance
+          </span>
+          <h1 class="display-5 text-white fw-bold mb-3">
+            Trust Is Built Through Responsible Action
+          </h1>
+          <p class="fs-5 text-white-50 mb-4 leading-relaxed">
+            At MeoCare, we recognize that trust is the cornerstone of humanitarian work. Supporters deserve open information regarding our activities, ethics, and verified use of resources.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#principles" class="btn btn-terracotta btn-lg">
+              <i class="bi bi-shield-check me-1"></i> Our Core Promise
+            </a>
+            <a href="policies.html" class="btn btn-outline-light-custom btn-lg">
+              <i class="bi bi-file-earmark-lock me-1"></i> Operating Policies
+            </a>
+          </div>
+          <div class="hero-impact-guarantee">
+            <span class="hero-impact-pill">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Honest Disclosures
+            </span>
+            <span class="hero-impact-pill">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Zero Simulation
+            </span>
+            <span class="hero-impact-pill">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Ethical Standards
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Side: Master Photo Card with Governance Pillars -->
+        <div class="col-lg-6 fade-in-on-scroll delay-1">
+          <div class="page-hero-master-card" role="region" aria-label="MeoCare Transparency Spotlight">
+            <div class="page-hero-img-wrap">
+              <img src="assets/images/partnership-collaboration.jpg" alt="Transparent community consultation and accountability planning" loading="eager">
+              <span class="page-hero-badge"><i class="bi bi-shield-check text-terracotta me-1"></i> Open Governance</span>
+              <span class="page-hero-stat-pill"><i class="bi bi-patch-check-fill text-terracotta me-1"></i> Verified Integrity</span>
+            </div>
+            <div class="page-hero-card-footer">
+              <div class="page-hero-stat-item">
+                <span class="stat-num text-terracotta">Audits</span>
+                <span class="stat-lbl">Open Records</span>
+              </div>
+              <div class="page-hero-stat-item">
+                <span class="stat-num text-white">Integrity</span>
+                <span class="stat-lbl">Zero Overhead Fraud</span>
+              </div>
+              <div class="page-hero-stat-item">
+                <span class="stat-num text-gold-muted">Consent</span>
+                <span class="stat-lbl">Safeguarding First</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Commitment Overview Intro -->
+  <section class="section-padding bg-section-transparency border-bottom">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8 fade-in-on-scroll">
+          <span class="eyebrow">
+            <i class="bi bi-award text-forest"></i> Ethical Standards
+          </span>
+          <h2 class="h1 text-forest-deep mb-3">Our Commitments</h2>
+          <p class="fs-5 text-forest-mid mb-0">
+            We aim to establish transparent processes, maintain appropriate records, and communicate honestly about our progress.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Commitment 1 -->
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll">
+          <div class="card p-4 rounded-4 bg-white border h-100 shadow-sm">
+            <div class="fs-2 text-forest mb-3"><i class="bi bi-cash-coin"></i></div>
+            <h4 class="h5 text-forest mb-2">Responsible Use of Donations</h4>
+            <p class="text-muted small mb-0">
+              We aim to allocate donations in accordance with the relevant campaign terms, agreed funding conditions, and our published donation policy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commitment 2 -->
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll delay-1">
+          <div class="card p-4 rounded-4 bg-white border h-100 shadow-sm">
+            <div class="fs-2 text-forest mb-3"><i class="bi bi-file-earmark-bar-graph"></i></div>
+            <h4 class="h5 text-forest mb-2">Clear Program Information</h4>
+            <p class="text-muted small mb-0">
+              We aim to communicate our program objectives, activities, and outcomes accurately, using verified information.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commitment 3 -->
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll delay-2">
+          <div class="card p-4 rounded-4 bg-white border h-100 shadow-sm">
+            <div class="fs-2 text-forest mb-3"><i class="bi bi-journal-text"></i></div>
+            <h4 class="h5 text-forest mb-2">Financial Records</h4>
+            <p class="text-muted small mb-0">
+              We aim to maintain appropriate financial records and make relevant financial information available in accordance with our legal obligations, organizational policies, and reporting capacity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commitment 4 -->
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll">
+          <div class="card p-4 rounded-4 bg-white border h-100 shadow-sm">
+            <div class="fs-2 text-forest mb-3"><i class="bi bi-diagram-3"></i></div>
+            <h4 class="h5 text-forest mb-2">Governance & Organization</h4>
+            <p class="text-muted small mb-0">
+              Verified information about our legal structure, registration status, governance, and responsible representatives will be published when available and appropriate.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commitment 5 -->
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll delay-1">
+          <div class="card p-4 rounded-4 bg-white border h-100 shadow-sm">
+            <div class="fs-2 text-forest mb-3"><i class="bi bi-shield-check"></i></div>
+            <h4 class="h5 text-forest mb-2">Safeguarding & Ethical Conduct</h4>
+            <p class="text-muted small mb-0">
+              We aim to promote respectful treatment of beneficiaries, responsible handling of personal information, and appropriate safeguarding practices across our activities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commitment 6 -->
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll delay-2">
+          <div class="card p-4 rounded-4 bg-white border h-100 shadow-sm">
+            <div class="fs-2 text-forest mb-3"><i class="bi bi-chat-heart"></i></div>
+            <h4 class="h5 text-forest mb-2">Feedback & Complaints</h4>
+            <p class="text-muted small mb-0">
+              We aim to provide a clear channel through which donors, partners, volunteers, and community members can raise questions, concerns, or complaints.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reports & Documents Table Section -->
+  <section class="section-padding bg-white border-bottom">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8 fade-in-on-scroll">
+          <span class="eyebrow eyebrow-terracotta">
+            <i class="bi bi-folder2-open"></i> Institutional Disclosure
+          </span>
+          <h2 class="h1 text-forest-deep mb-2">Reports & Documents</h2>
+          <p class="text-muted fs-5 mb-0">
+            The following documents may be made available as they are prepared and verified. Documents will be published only when they are available, accurate, and approved for public sharing.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center fade-in-on-scroll">
+        <div class="col-lg-10">
+          <div class="table-responsive docs-table">
+            <table class="table mb-0 align-middle">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 50%;">Document Title</th>
+                  <th scope="col" style="width: 25%;">Category</th>
+                  <th scope="col" style="width: 25%;">Availability Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="bi bi-file-earmark-person text-forest me-2"></i> <strong>Organizational Profile</strong></td>
+                  <td><span class="badge bg-light text-forest border">Governance</span></td>
+                  <td><span class="status-badge-pending"><i class="bi bi-clock-history"></i> Under Preparation</span></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-file-earmark-check text-forest me-2"></i> <strong>Registration and Legal Documents</strong>, where applicable</td>
+                  <td><span class="badge bg-light text-forest border">Legal Status</span></td>
+                  <td><span class="status-badge-pending"><i class="bi bi-clock-history"></i> When Verified & Applicable</span></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-calendar-event text-forest me-2"></i> <strong>Annual Activity Reports</strong></td>
+                  <td><span class="badge bg-light text-forest border">Reporting</span></td>
+                  <td><span class="status-badge-pending"><i class="bi bi-clock-history"></i> To Be Published Annually</span></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-file-earmark-bar-graph text-forest me-2"></i> <strong>Program Impact Reports</strong></td>
+                  <td><span class="badge bg-light text-forest border">Operations</span></td>
+                  <td><span class="status-badge-pending"><i class="bi bi-clock-history"></i> Periodic Program Audits</span></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-file-earmark-spreadsheet text-forest me-2"></i> <strong>Financial Reports</strong></td>
+                  <td><span class="badge bg-light text-forest border">Finance</span></td>
+                  <td><span class="status-badge-pending"><i class="bi bi-clock-history"></i> In Line With Legal Capacity</span></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-patch-check text-forest me-2"></i> <strong>Audited Financial Statements</strong>, where available and applicable</td>
+                  <td><span class="badge bg-light text-forest border">Independent Audit</span></td>
+                  <td><span class="status-badge-pending"><i class="bi bi-clock-history"></i> When Available & Applicable</span></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-file-earmark-ruled text-forest me-2"></i> <strong>Donation and Fund Allocation Policy</strong></td>
+                  <td><span class="badge bg-light text-forest border">Policy</span></td>
+                  <td><a href="policies.html#donation" class="btn btn-sm btn-outline-forest py-1 px-3">View Active Framework &rarr;</a></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-shield-shaded text-forest me-2"></i> <strong>Safeguarding Policy</strong></td>
+                  <td><span class="badge bg-light text-forest border">Policy</span></td>
+                  <td><a href="policies.html#safeguarding" class="btn btn-sm btn-outline-forest py-1 px-3">View Policy &rarr;</a></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-lock text-forest me-2"></i> <strong>Privacy Policy</strong></td>
+                  <td><span class="badge bg-light text-forest border">Policy</span></td>
+                  <td><a href="policies.html#privacy" class="btn btn-sm btn-outline-forest py-1 px-3">View Document &rarr;</a></td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-chat-square-dots text-forest me-2"></i> <strong>Complaints and Feedback Policy</strong></td>
+                  <td><span class="badge bg-light text-forest border">Policy</span></td>
+                  <td><a href="policies.html#complaints" class="btn btn-sm btn-outline-forest py-1 px-3">View Channel &rarr;</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Promise Section -->
+  <section class="section-padding bg-section-principles">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 fade-in-on-scroll">
+          <span class="eyebrow eyebrow-gold">
+            <i class="bi bi-shield-check"></i> Uncompromising Integrity
+          </span>
+          <h2 class="h1 text-forest-deep mb-3">Our Promise</h2>
+          <blockquote class="p-4 bg-white rounded-4 border-start border-4 border-forest shadow-sm mb-4">
+            <p class="fs-5 text-forest mb-0 fw-medium">
+              &ldquo;We will not present unverified figures, unsupported claims, or unconfirmed partnerships as established facts. We believe honest communication is essential to building lasting trust.&rdquo;
+            </p>
+          </blockquote>
+          <p class="text-muted">
+            For questions about our activities, documentation, or donation policies, please reach out to our team.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="contact.html" class="btn btn-forest btn-lg">
+              <i class="bi bi-envelope"></i> Contact MeoCare
+            </a>
+            <a href="policies.html" class="btn btn-outline-forest btn-lg">
+              <i class="bi bi-file-earmark-text"></i> Explore All Policies
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 fade-in-on-scroll delay-1">
+          <div class="card p-4 p-md-5 rounded-4 bg-forest-deep text-white shadow-lg">
+            <h4 class="text-white mb-3"><i class="bi bi-info-circle text-sage me-2"></i> Verification Protocol</h4>
+            <p class="text-white-50 small mb-3">
+              MeoCare adheres to strict documentation standards: every donation allocation, program distribution, and animal intervention requires operational verification before public archiving.
+            </p>
+            <div class="border-top border-secondary pt-3 mt-3">
+              <span class="small text-white-50 d-block mb-1">Official Privacy Contact:</span>
+              <span class="placeholder-pill">[Insert Official Privacy Contact Email]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block">
+            <img src="images/logo.png" alt="MEO Care Organization Logo" class="footer-logo">
+          </a>
+          <p class="text-white fw-semibold mb-2">A Better World Begins With Compassion.</p>
+          <p class="text-white-50 small mb-4">
+            Supporting vulnerable families through food assistance and promoting animal welfare through compassionate care, responsible action, and community partnerships.
+          </p>
+          <div class="footer-disclaimer-box">
+            <small>
+              MeoCare is committed to responsible humanitarian assistance, animal welfare, and transparent communication. Organizational registration, donation eligibility, and tax-related information will be published only when verified and applicable.
+            </small>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="programs.html"><i class="bi bi-chevron-right"></i> Our Programs</a></li>
+            <li><a href="impact.html"><i class="bi bi-chevron-right"></i> Our Impact</a></li>
+            <li><a href="news.html"><i class="bi bi-chevron-right"></i> News & Stories</a></li>
+            <li><a href="transparency.html"><i class="bi bi-chevron-right"></i> Transparency</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Our Focus</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html#food-assistance"><i class="bi bi-basket2"></i> Food Assistance</a></li>
+            <li><a href="programs.html#animal-welfare"><i class="bi bi-heart-pulse"></i> Animal Welfare</a></li>
+            <li><a href="programs.html#community-partnerships"><i class="bi bi-handshake"></i> Partnerships</a></li>
+            <li><a href="donate.html"><i class="bi bi-heart"></i> Donate Now</a></li>
+            <li><a href="volunteer.html"><i class="bi bi-people"></i> Become a Volunteer</a></li>
+            <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-links mb-3">
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Email:</strong>
+              <span class="placeholder-pill">[Insert Official Email Address]</span>
+            </li>
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Phone:</strong>
+              <span class="placeholder-pill">[Insert Official Contact Number]</span>
+            </li>
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Office Address:</strong>
+              <span class="placeholder-pill">[Insert Verified Office Address]</span>
+            </li>
+          </ul>
+
+          <h5 class="text-white fs-6 mt-3 mb-2">Governance & Policies</h5>
+          <ul class="footer-links small">
+            <li><a href="policies.html#privacy"><i class="bi bi-shield-lock"></i> Privacy Policy</a></li>
+            <li><a href="policies.html#donation"><i class="bi bi-file-text"></i> Donation Policy</a></li>
+            <li><a href="policies.html#safeguarding"><i class="bi bi-heart"></i> Safeguarding Policy</a></li>
+            <li><a href="policies.html#complaints"><i class="bi bi-chat-left-text"></i> Complaints & Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">
+          &copy; <span class="placeholder-pill">[Insert Current Year]</span> (<span class="current-year-text">2026</span>) MeoCare. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btnScrollTop" class="btn-scroll-top" aria-label="Scroll to top of page">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

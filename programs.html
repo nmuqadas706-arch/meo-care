@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Programs | MEO Care Organization</title>
+  <meta name="description" content="Explore MeoCare's core programs: Food Assistance & Humanitarian Aid, Animal Rescue & Welfare, and Community Partnerships.">
+  
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts (Playfair Display & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS (Local with CDN fallback) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" onerror="this.onerror=null;">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-shield-heart-fill text-sage"></i>
+        <span>A Better World Begins With Compassion.</span>
+      </div>
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <a href="transparency.html"><i class="bi bi-lock me-1"></i>Transparency & Accountability</a>
+        <span class="text-white-50">|</span>
+        <a href="volunteer.html"><i class="bi bi-people me-1"></i>Volunteer With Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Navigation (Redesigned Premium Nonprofit Navbar) -->
+  <nav class="navbar navbar-expand-xl navbar-custom sticky-top" id="mainNavbar" aria-label="Main Navigation">
+    <div class="container">
+      <!-- Official MEO Care Logo (Original 2:1 Proportions) -->
+      <a class="navbar-brand" href="index.html" aria-label="MEO Care Organization Home">
+        <img src="images/logo.png" alt="MEO Care Organization Logo" class="brand-logo" width="130" height="48">
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="navbar-toggler border-0 shadow-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar bar-1"></span>
+        <span class="toggler-bar bar-2"></span>
+        <span class="toggler-bar bar-3"></span>
+      </button>
+
+      <!-- Navigation Links & Dropdowns -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto align-items-xl-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>About</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="aboutDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">
+                  <span class="item-title">About MeoCare</span>
+                  <span class="item-desc">Our mission, vision, and core purpose</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="about.html#values">
+                  <span class="item-title">Our Values</span>
+                  <span class="item-desc">6 ethical commitments guiding our work</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="transparency.html">
+                  <span class="item-title">Transparency & Accountability</span>
+                  <span class="item-desc">Open governance, reports, and promise</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="policies.html">
+                  <span class="item-title">Policies & Governance</span>
+                  <span class="item-desc">Privacy, safeguarding, and donation terms</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Programs Dropdown (Active) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>Programs</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="programsDropdown">
+              <li>
+                <a class="dropdown-item active" href="programs.html">
+                  <span class="item-title">All Programs Overview</span>
+                  <span class="item-desc">Comprehensive relief & welfare overview</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#food-assistance">
+                  <span class="item-title">Food Assistance & Humanitarian Aid</span>
+                  <span class="item-desc">Nourishing vulnerable families in need</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#animal-welfare">
+                  <span class="item-title">Animal Rescue & Welfare</span>
+                  <span class="item-desc">Rescue, food, veterinary treatment & shelter</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="programs.html#community-partnerships">
+                  <span class="item-title">Community Partnerships</span>
+                  <span class="item-desc">CSR, institutional collaboration & in-kind aid</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Our Impact -->
+          <li class="nav-item">
+            <a class="nav-link" href="impact.html">Our Impact</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="true">
+              <span>Get Involved</span>
+              <i class="bi bi-chevron-down nav-chevron" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom border-0 shadow-md" aria-labelledby="getInvolvedDropdown">
+              <li>
+                <a class="dropdown-item" href="volunteer.html">
+                  <span class="item-title">Ways to Get Involved</span>
+                  <span class="item-desc">Community support & volunteer avenues</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="volunteer.html#volunteer-form-section">
+                  <span class="item-title">Become a Volunteer</span>
+                  <span class="item-desc">Lend your time, care, or professional skills</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="volunteer.html#partner">
+                  <span class="item-title">Partner With Us</span>
+                  <span class="item-desc">Corporate partnerships & joint initiatives</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="donate.html">
+                  <span class="item-title">Ways to Give</span>
+                  <span class="item-desc">One-time, monthly, and in-kind giving options</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- News -->
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right Side: Prominent Tasteful Donate Now Button -->
+        <div class="navbar-cta d-flex align-items-center">
+          <a class="btn btn-navbar-donate" href="donate.html">
+            <i class="bi bi-heart-fill me-1" aria-hidden="true"></i>
+            <span>Donate Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Hero (Split Layout: Left Text & CTA, Right 4-in-1 Master Photo Frame) -->
+  <header class="page-hero page-hero-programs">
+    <div class="page-hero-bg"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <!-- Left Side: Navigation, Headings & Action Buttons -->
+        <div class="col-lg-6 hero-programs-left fade-in-on-scroll">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb breadcrumb-custom">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Programs</li>
+            </ol>
+          </nav>
+          <span class="eyebrow eyebrow-white mb-2">
+            <i class="bi bi-grid-fill text-terracotta"></i> Comprehensive Focus Areas
+          </span>
+          <h1 class="display-5 text-white fw-bold mb-3">
+            Creating Impact Where It Matters Most
+          </h1>
+          <p class="fs-5 text-white-50 mb-4 leading-relaxed">
+            MeoCare bridges critical humanitarian needs and animal protection through verified, transparent, and community-driven initiatives. Discover our active focus areas below.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#food-assistance" class="btn btn-terracotta btn-lg">
+              <i class="bi bi-arrow-down-circle me-1"></i> Explore Programs
+            </a>
+            <a href="donate.html" class="btn btn-forest btn-lg">
+              <i class="bi bi-heart-fill me-1"></i> Donate Now
+            </a>
+            <a href="volunteer.html#partner" class="btn btn-outline-light-custom btn-lg">
+              <i class="bi bi-handshake me-1"></i> Partner With Us
+            </a>
+          </div>
+          <div class="d-flex flex-wrap gap-2 pt-3 border-top border-white border-opacity-10">
+            <span class="hero-programs-trust-badge">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Verified Food Aid
+            </span>
+            <span class="hero-programs-trust-badge">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Animal Rescue &amp; Care
+            </span>
+            <span class="hero-programs-trust-badge">
+              <i class="bi bi-check-circle-fill text-terracotta"></i> Community Mobilization
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Side: 4 Pictures in 1 Master Luxury Frame -->
+        <div class="col-lg-6 fade-in-on-scroll delay-1">
+          <div class="hero-mosaic-frame" role="region" aria-label="MeoCare Core Programs Photo Collage">
+            <div class="hero-mosaic-grid">
+              <!-- Picture 1: Food Assistance -->
+              <div class="hero-mosaic-cell">
+                <img src="assets/images/food-assistance.jpg" alt="Humanitarian Food Assistance distribution" loading="eager">
+                <span class="cell-tag"><i class="bi bi-basket2-fill text-terracotta me-1"></i> Food Assistance</span>
+              </div>
+              <!-- Picture 2: Animal Rescue -->
+              <div class="hero-mosaic-cell">
+                <img src="assets/images/animal-rescue.jpg" alt="Compassionate Animal Rescue and medical care" loading="eager">
+                <span class="cell-tag"><i class="bi bi-heart-pulse-fill text-terracotta me-1"></i> Animal Rescue</span>
+              </div>
+              <!-- Picture 3: Veterinary Care -->
+              <div class="hero-mosaic-cell">
+                <img src="assets/images/veterinary-clinic.jpg" alt="Veterinary checkup and compassionate animal treatment" loading="eager">
+                <span class="cell-tag"><i class="bi bi-bandaid-fill text-forest-light me-1"></i> Veterinary Care</span>
+              </div>
+              <!-- Picture 4: Community Partnerships -->
+              <div class="hero-mosaic-cell">
+                <img src="assets/images/partnership-collaboration.jpg" alt="Community collaboration and partnership meeting" loading="eager">
+                <span class="cell-tag"><i class="bi bi-people-fill text-gold me-1"></i> Partnerships</span>
+              </div>
+            </div>
+            <!-- Central Emblem -->
+            <div class="hero-mosaic-crest" aria-hidden="true">
+              <i class="bi bi-shield-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Programs Overview Intro with Interactive Hover Reveal Cards -->
+  <section class="section-padding-sm bg-section-difference border-bottom">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-9 fade-in-on-scroll">
+          <h2 class="h2 text-forest-deep mb-3">Creating Impact Where It Matters Most</h2>
+          <p class="fs-5 text-forest-mid mb-0">
+            MeoCare focuses on three core pillars: humanitarian food assistance, animal rescue and welfare, and community partnerships. Hover over each card to explore our active initiatives.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 Program Cards (Hover Reveal Overlay Effect) -->
+      <div class="row g-4 align-items-stretch">
+        <!-- 1. Food Assistance -->
+        <div class="col-lg-4 col-md-6 fade-in-on-scroll delay-1">
+          <div class="card-reveal-box" tabindex="0" role="region" aria-label="Food Assistance and Humanitarian Aid" aria-expanded="false">
+            <div class="card-reveal-media">
+              <img src="assets/images/food-assistance.jpg" alt="Nutritious food supplies and ration packages for families" class="card-reveal-img" loading="lazy">
+              <span class="card-reveal-badge badge-food">Core Program 01</span>
+              <span class="card-reveal-tap-hint d-md-none"><i class="bi bi-hand-index-thumb"></i> Tap to view</span>
+            </div>
+            <div class="card-reveal-overlay">
+              <div class="card-reveal-content">
+                <span class="card-reveal-eyebrow"><i class="bi bi-basket2-fill"></i> Humanitarian Relief</span>
+                <h3 class="card-reveal-title">Food Assistance &amp; Humanitarian Aid</h3>
+                <p class="card-reveal-desc">
+                  Providing vulnerable families with food rations, dry staples, and emergency meal assistance to combat hunger with dignity.
+                </p>
+                <div class="card-reveal-actions">
+                  <a href="#food-assistance" class="btn btn-terracotta">
+                    <i class="bi bi-arrow-down-circle"></i> Jump to Details
+                  </a>
+                  <a href="donate.html?fund=food" class="btn btn-outline-white">
+                    <i class="bi bi-heart-fill"></i> Donate
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Animal Welfare -->
+        <div class="col-lg-4 col-md-6 fade-in-on-scroll delay-2">
+          <div class="card-reveal-box" tabindex="0" role="region" aria-label="Animal Rescue and Welfare" aria-expanded="false">
+            <div class="card-reveal-media">
+              <img src="assets/images/animal-rescue.jpg" alt="Compassionate animal rescue, medical treatment, and shelter" class="card-reveal-img" loading="lazy">
+              <span class="card-reveal-badge badge-animal">Core Program 02</span>
+              <span class="card-reveal-tap-hint d-md-none"><i class="bi bi-hand-index-thumb"></i> Tap to view</span>
+            </div>
+            <div class="card-reveal-overlay">
+              <div class="card-reveal-content">
+                <span class="card-reveal-eyebrow"><i class="bi bi-heart-pulse-fill"></i> Animal Welfare</span>
+                <h3 class="card-reveal-title">Animal Rescue &amp; Welfare</h3>
+                <p class="card-reveal-desc">
+                  Delivering emergency animal rescues, veterinary treatments, shelter rehabilitation, and street animal feeding programs.
+                </p>
+                <div class="card-reveal-actions">
+                  <a href="#animal-welfare" class="btn btn-terracotta">
+                    <i class="bi bi-arrow-down-circle"></i> Jump to Details
+                  </a>
+                  <a href="donate.html?fund=animal" class="btn btn-outline-white">
+                    <i class="bi bi-heart-pulse-fill"></i> Donate
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Community Partnerships -->
+        <div class="col-lg-4 col-md-12 fade-in-on-scroll delay-3">
+          <div class="card-reveal-box" tabindex="0" role="region" aria-label="Community Partnerships" aria-expanded="false">
+            <div class="card-reveal-media">
+              <img src="assets/images/partnership-collaboration.jpg" alt="Community members and organizations collaborating" class="card-reveal-img" loading="lazy">
+              <span class="card-reveal-badge badge-partner">Core Program 03</span>
+              <span class="card-reveal-tap-hint d-md-none"><i class="bi bi-hand-index-thumb"></i> Tap to view</span>
+            </div>
+            <div class="card-reveal-overlay">
+              <div class="card-reveal-content">
+                <span class="card-reveal-eyebrow"><i class="bi bi-handshake-fill"></i> Collaboration</span>
+                <h3 class="card-reveal-title">Community Partnerships</h3>
+                <p class="card-reveal-desc">
+                  Building alliances with community volunteers, local merchants, and partner organizations for long-term sustainable relief.
+                </p>
+                <div class="card-reveal-actions">
+                  <a href="#community-partnerships" class="btn btn-terracotta">
+                    <i class="bi bi-arrow-down-circle"></i> Jump to Details
+                  </a>
+                  <a href="volunteer.html#partner" class="btn btn-outline-white">
+                    <i class="bi bi-handshake"></i> Partner With Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program 01: Food Assistance & Humanitarian Aid -->
+  <section id="food-assistance" class="section-padding bg-section-food border-bottom">
+    <div class="container">
+      <!-- Official Program Banner -->
+      <div class="banner-callout-card fade-in-on-scroll mb-5">
+        <img src="images/hero-food-relief.jpg" alt="MEO Care Humanitarian Food Relief official banner" class="img-fluid rounded-4">
+      </div>
+
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7 fade-in-on-scroll">
+          <span class="eyebrow mb-2">Program 01 Focus</span>
+          <h2 class="h1 text-forest-deep mb-3">Helping Families Access Essential Food Supplies</h2>
+          <p class="fs-5 text-forest-mid">
+            Access to food is a basic human need. However, many individuals and families experience financial hardship that makes obtaining everyday necessities difficult.
+          </p>
+          <p>
+            MeoCare aims to support vulnerable households through food assistance initiatives designed to help address immediate needs while preserving dignity and respect.
+          </p>
+
+          <!-- How Support Helps (Non-duplicated detail outside banner) -->
+          <div class="p-4 bg-sage-tint rounded-4 border my-4">
+            <h5 class="text-forest fw-bold mb-2"><i class="bi bi-heart-fill text-forest me-2"></i> How Your Support Helps</h5>
+            <p class="text-forest-mid small mb-0">
+              Your contribution helps source essential food items, prepare ration packages, and support families facing hardship. The actual number of beneficiaries and scope of assistance depend on available funding, resources, and verified community needs.
+            </p>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="donate.html?fund=food" class="btn btn-forest btn-lg">
+              <i class="bi bi-basket2-fill"></i> Donate to Food Assistance
+            </a>
+            <a href="volunteer.html" class="btn btn-outline-forest btn-lg">
+              <i class="bi bi-people"></i> Volunteer For Food Relief
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 fade-in-on-scroll delay-1">
+          <div class="card border-0 shadow-md rounded-4 overflow-hidden mb-4">
+            <img src="images/food-assistance.jpg" alt="Nutritious food items packaged for community support" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+            <div class="p-3 bg-white">
+              <div class="illustrative-notice">
+                <i class="bi bi-info-circle"></i> Illustrative photograph: Essential food packages and grain distribution.
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-md rounded-4 overflow-hidden">
+            <img src="images/family-support.jpg" alt="Caring family support in community" class="img-fluid w-100 object-fit-cover" style="height: 240px;">
+            <div class="p-3 bg-white">
+              <div class="illustrative-notice">
+                <i class="bi bi-info-circle"></i> Illustrative photograph: Supporting families with respect and dignity.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program 02: Animal Rescue & Welfare -->
+  <section id="animal-welfare" class="section-padding bg-section-animal-welfare border-bottom">
+    <div class="container">
+      <!-- Official Program Banner -->
+      <div class="banner-callout-card fade-in-on-scroll mb-5">
+        <img src="images/hero-animal-welfare.jpg" alt="Rescue, Nourish, Heal: Every Animal Deserves Compassion official banner" class="img-fluid rounded-4">
+      </div>
+
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7 fade-in-on-scroll">
+          <span class="eyebrow eyebrow-terracotta mb-2">Program 02 Focus</span>
+          <h2 class="h1 text-forest-deep mb-3">Protecting Animals Through Compassionate Care</h2>
+          <p class="fs-5 text-forest-mid">
+            Animals can face hunger, injury, illness, abandonment, and unsafe living conditions. MeoCare believes they deserve compassionate treatment and responsible care.
+          </p>
+          <p>
+            Our animal welfare initiatives aim to assist animals in need through rescue support, feeding, veterinary care, and rehabilitation, depending on available resources and qualified partnerships.
+          </p>
+
+          <!-- How Support Helps (Non-duplicated detail outside banner) -->
+          <div class="p-4 bg-white rounded-4 border border-warning border-opacity-25 shadow-sm my-4">
+            <h5 class="text-terracotta fw-bold mb-2"><i class="bi bi-heart-pulse-fill text-terracotta me-2"></i> How Your Support Helps</h5>
+            <p class="text-muted small mb-0">
+              Your contribution helps provide food, medical assistance, transportation, and other essential care for animals in need. Specific activities depend on the nature of the case, available resources, and access to appropriate veterinary services.
+            </p>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="donate.html?fund=animal" class="btn btn-terracotta btn-lg">
+              <i class="bi bi-heart-pulse-fill"></i> Donate to Animal Welfare
+            </a>
+            <a href="volunteer.html" class="btn btn-outline-forest btn-lg">
+              <i class="bi bi-hand-thumbs-up"></i> Volunteer For Animal Care
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 fade-in-on-scroll delay-1">
+          <div class="card border-0 shadow-md rounded-4 overflow-hidden mb-4">
+            <img src="images/animal-rescue.jpg" alt="Cared-for rescued animal illustration" class="img-fluid w-100 object-fit-cover" style="height: 300px;">
+            <div class="p-3 bg-white">
+              <div class="illustrative-notice">
+                <i class="bi bi-info-circle"></i> Illustrative photograph: Compassionate rescue and shelter protection.
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-md rounded-4 overflow-hidden">
+            <img src="images/veterinary-clinic.jpg" alt="Veterinary checkup and medical care illustration" class="img-fluid w-100 object-fit-cover" style="height: 250px;">
+            <div class="p-3 bg-white">
+              <div class="illustrative-notice">
+                <i class="bi bi-info-circle"></i> Illustrative photograph: Veterinary consultation and clinical treatment.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program 03: Community Partnerships -->
+  <section id="community-partnerships" class="section-padding bg-section-partnerships">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 fade-in-on-scroll">
+          <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <img src="images/partnership-collaboration.jpg" alt="Community collaboration and partnership meeting" class="img-fluid w-100 object-fit-cover" style="max-height: 440px;">
+            <div class="p-3 bg-white">
+              <div class="illustrative-notice">
+                <i class="bi bi-info-circle"></i> Illustrative photograph: Collaborative teamwork for sustainable humanitarian impact.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 fade-in-on-scroll delay-1">
+          <span class="eyebrow eyebrow-gold mb-2">Program 03</span>
+          <h2 class="h1 text-forest-deep mb-3">Community Partnerships</h2>
+          <h4 class="text-sage fw-semibold mb-4">Working Together for Greater Impact</h4>
+          <p class="fs-5 text-forest-mid">
+            Sustainable community support requires collaboration. MeoCare welcomes opportunities to work with individuals, businesses, charitable organizations, foundations, and institutional partners.
+          </p>
+          <!-- How Support Helps (Non-duplicated detail outside banner) -->
+          <div class="p-4 bg-sage-tint rounded-4 border my-4">
+            <h5 class="text-forest fw-bold mb-2"><i class="bi bi-heart-fill text-forest me-2"></i> How Your Support Helps</h5>
+            <p class="text-forest-mid small mb-0">
+              Your contribution helps source essential food items, prepare ration packages, and support families facing hardship. The actual number of beneficiaries and scope of assistance depend on available funding, resources, and verified community needs.
+            </p>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="volunteer.html#partner" class="btn btn-forest btn-lg">
+              <i class="bi bi-handshake"></i> Become a Partner
+            </a>
+            <a href="contact.html" class="btn btn-outline-forest btn-lg">
+              <i class="bi bi-envelope"></i> Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block">
+            <img src="images/logo.png" alt="MEO Care Organization Logo" class="footer-logo">
+          </a>
+          <p class="text-white fw-semibold mb-2">A Better World Begins With Compassion.</p>
+          <p class="text-white-50 small mb-4">
+            Supporting vulnerable families through food assistance and promoting animal welfare through compassionate care, responsible action, and community partnerships.
+          </p>
+          <div class="footer-disclaimer-box">
+            <small>
+              MeoCare is committed to responsible humanitarian assistance, animal welfare, and transparent communication. Organizational registration, donation eligibility, and tax-related information will be published only when verified and applicable.
+            </small>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="programs.html"><i class="bi bi-chevron-right"></i> Our Programs</a></li>
+            <li><a href="impact.html"><i class="bi bi-chevron-right"></i> Our Impact</a></li>
+            <li><a href="news.html"><i class="bi bi-chevron-right"></i> News & Stories</a></li>
+            <li><a href="transparency.html"><i class="bi bi-chevron-right"></i> Transparency</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Our Focus</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html#food-assistance"><i class="bi bi-basket2"></i> Food Assistance</a></li>
+            <li><a href="programs.html#animal-welfare"><i class="bi bi-heart-pulse"></i> Animal Welfare</a></li>
+            <li><a href="programs.html#community-partnerships"><i class="bi bi-handshake"></i> Partnerships</a></li>
+            <li><a href="donate.html"><i class="bi bi-heart"></i> Donate Now</a></li>
+            <li><a href="volunteer.html"><i class="bi bi-people"></i> Become a Volunteer</a></li>
+            <li><a href="contact.html"><i class="bi bi-envelope"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-links mb-3">
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Email:</strong>
+              <span class="placeholder-pill">[Insert Official Email Address]</span>
+            </li>
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Phone:</strong>
+              <span class="placeholder-pill">[Insert Official Contact Number]</span>
+            </li>
+            <li class="text-white-50 small mb-2">
+              <strong class="text-white d-block">Office Address:</strong>
+              <span class="placeholder-pill">[Insert Verified Office Address]</span>
+            </li>
+          </ul>
+
+          <h5 class="text-white fs-6 mt-3 mb-2">Governance & Policies</h5>
+          <ul class="footer-links small">
+            <li><a href="policies.html#privacy"><i class="bi bi-shield-lock"></i> Privacy Policy</a></li>
+            <li><a href="policies.html#donation"><i class="bi bi-file-text"></i> Donation Policy</a></li>
+            <li><a href="policies.html#safeguarding"><i class="bi bi-heart"></i> Safeguarding Policy</a></li>
+            <li><a href="policies.html#complaints"><i class="bi bi-chat-left-text"></i> Complaints & Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">
+          &copy; <span class="placeholder-pill">[Insert Current Year]</span> (<span class="current-year-text">2026</span>) MeoCare. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btnScrollTop" class="btn-scroll-top" aria-label="Scroll to top of page">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
