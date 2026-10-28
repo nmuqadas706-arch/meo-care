@@ -999,7 +999,7 @@ $(document).ready(function () {
     let $modal = $('#' + MODAL_ID);
     if (!$modal.length) {
       const modalHtml = `
-        <div id="${MODAL_ID}" class="meo-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="meoModalTitle" aria-describedby="meoModalDesc" style="display: block;">
+        <div id="${MODAL_ID}" class="meo-modal-backdrop" role="region" aria-label="Donation reminder" style="display: block;">
           <div class="meo-modal-dialog">
             <div class="meo-modal-rainbow-bar"></div>
             <button type="button" class="meo-modal-close-btn" id="meoModalCloseBtn" aria-label="Close donation popup">

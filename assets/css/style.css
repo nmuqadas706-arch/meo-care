@@ -3591,20 +3591,22 @@ canvas, svg {
 
 /* ==========================================================================
    Premium Floating Donation Popup (MEO Care Brand Identity)
-   Compact corner widget – no overlay, no backdrop, no page blocking.
+   Compact corner widget on desktop, bottom-centered card on mobile.
+   Zero overlay, zero backdrop, zero blur — page remains 100% interactive.
    Colors: Navy (#0B2D5C), Green (#219653), Blue (#0878D1),
    Yellow (#FFB81C), Orange (#F36B21), Ivory (#FFFDF7)
    ========================================================================== */
 
-/* The "backdrop" is now just a transparent positioning anchor — no overlay */
+/* The positioning container — transparent anchor, non-blocking */
 .meo-modal-backdrop {
   position: fixed;
-  bottom: 16px;
-  right: 18px;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
   width: 100%;
-  max-width: 300px;
+  max-width: 290px;
   z-index: 9500;
-  pointer-events: none; /* clicks pass through when hidden */
+  pointer-events: none; /* Clicks anywhere around the popup pass straight to the website */
   opacity: 0;
   visibility: hidden;
   transform: translateY(16px) scale(0.96);
@@ -3617,6 +3619,10 @@ canvas, svg {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
+}
+
+/* Only the popup card itself captures touch and clicks */
+.meo-modal-backdrop.is-open .meo-modal-dialog {
   pointer-events: auto;
 }
 
@@ -3627,8 +3633,8 @@ canvas, svg {
   flex-direction: column;
   background-color: var(--color-ivory, #FFFDF7);
   border-radius: 18px;
-  box-shadow: 0 20px 60px -8px rgba(7, 29, 59, 0.38),
-              0 8px 22px -4px rgba(7, 29, 59, 0.18),
+  box-shadow: 0 16px 45px -8px rgba(7, 29, 59, 0.35),
+              0 6px 18px -4px rgba(7, 29, 59, 0.16),
               0 0 0 1px rgba(11, 45, 92, 0.1);
   border: 1px solid rgba(11, 45, 92, 0.1);
   overflow: hidden;
@@ -3637,7 +3643,7 @@ canvas, svg {
 
 /* Elegant Brand Rainbow Bar at the top of the modal */
 .meo-modal-rainbow-bar {
-  height: 5px;
+  height: 4px;
   width: 100%;
   background: linear-gradient(
     90deg,
@@ -3651,32 +3657,32 @@ canvas, svg {
   z-index: 10;
 }
 
-/* Close Button (Tasteful circle in top-right with clear contrast over photo) */
+/* Close Button (Clearly visible circular button in top-right corner) */
 .meo-modal-close-btn {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 36px;
-  height: 36px;
+  top: 9px;
+  right: 9px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background-color: #ffffff;
+  border: 1px solid rgba(11, 45, 92, 0.15);
   color: var(--color-navy, #0B2D5C);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.22s ease;
   z-index: 30;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
 .meo-modal-close-btn i {
   pointer-events: none;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .meo-modal-close-btn:hover,
@@ -3684,7 +3690,7 @@ canvas, svg {
   background-color: #ffffff;
   color: var(--color-orange, #F36B21);
   transform: scale(1.1) rotate(90deg);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.32);
 }
 
 .meo-modal-close-btn:focus-visible {
@@ -3692,11 +3698,11 @@ canvas, svg {
   outline-offset: 2px;
 }
 
-/* Compact Hero Banner Photo for the floating popup widget */
+/* Compact Hero Banner Photo */
 .meo-modal-img-wrap {
   position: relative;
   width: 100%;
-  height: 85px;
+  height: 78px;
   overflow: hidden;
   background-color: var(--color-navy-deep, #071D3B);
 }
@@ -3728,22 +3734,22 @@ canvas, svg {
   pointer-events: none;
 }
 
-/* Floating Heart Icon Badge — smaller for compact widget */
+/* Floating Heart Icon Badge overlapping photo & content */
 .meo-modal-floating-icon {
   position: absolute;
-  bottom: -14px;
+  bottom: -13px;
   left: 50%;
   transform: translateX(-50%);
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #ffffff;
   border: 2px solid #FFFDF7;
-  box-shadow: 0 6px 16px rgba(7, 29, 59, 0.16);
+  box-shadow: 0 5px 14px rgba(7, 29, 59, 0.16);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   z-index: 5;
   transition: transform 0.3s ease;
 }
@@ -3768,9 +3774,9 @@ canvas, svg {
   70% { transform: scale(1); }
 }
 
-/* Modal Content Body — very compact for floating widget */
+/* Modal Content Body — compact and clean */
 .meo-modal-body {
-  padding: 1rem 1.15rem 1.1rem;
+  padding: 0.9rem 1.05rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3780,71 +3786,71 @@ canvas, svg {
 .meo-modal-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.3rem;
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   color: #197841;
   background-color: var(--color-green-tint, #E9F7EF);
   border: 1px solid rgba(33, 150, 83, 0.25);
-  padding: 0.22rem 0.7rem;
+  padding: 0.18rem 0.65rem;
   border-radius: var(--radius-pill);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.45rem;
 }
 
-/* Heading — very compact for floating widget */
+/* Heading */
 .meo-modal-heading {
   font-family: var(--font-heading);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-navy, #0B2D5C);
   line-height: 1.22;
   letter-spacing: -0.01em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
-/* Supporting Text — very compact for floating widget */
+/* Supporting Text */
 .meo-modal-text {
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--color-text-body, #1E3A5F);
-  line-height: 1.45;
-  margin-bottom: 0.65rem;
+  line-height: 1.4;
+  margin-bottom: 0.55rem;
   max-width: 100%;
 }
 
-/* Highlight Chips — compact spacing */
+/* Highlight Chips */
 .meo-modal-highlights {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.3rem;
-  margin-bottom: 0.75rem;
+  gap: 0.28rem;
+  margin-bottom: 0.65rem;
   width: 100%;
 }
 
 .meo-modal-highlights .highlight-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.28rem;
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--color-navy, #0B2D5C);
   background-color: #ffffff;
   border: 1px solid rgba(11, 45, 92, 0.1);
-  padding: 0.22rem 0.6rem;
+  padding: 0.18rem 0.55rem;
   border-radius: var(--radius-pill);
-  box-shadow: 0 2px 6px rgba(11, 45, 92, 0.04);
+  box-shadow: 0 1px 4px rgba(11, 45, 92, 0.04);
 }
 
 /* Modal Actions */
 .meo-modal-actions {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.4rem;
   width: 100%;
 }
 
@@ -3853,10 +3859,10 @@ canvas, svg {
   background: linear-gradient(135deg, var(--color-blue, #0878D1) 0%, #065FA6 100%);
   color: #ffffff !important;
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  padding: 0.58rem 1.25rem;
+  padding: 0.54rem 1.15rem;
   border-radius: var(--radius-pill);
   border: none;
   display: inline-flex;
@@ -3872,7 +3878,7 @@ canvas, svg {
 .btn-meo-donate-modal:focus {
   background: linear-gradient(135deg, #0986e8 0%, var(--color-blue, #0878D1) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(8, 120, 209, 0.48);
+  box-shadow: 0 10px 24px rgba(8, 120, 209, 0.45);
   color: #ffffff !important;
 }
 
@@ -3886,9 +3892,9 @@ canvas, svg {
   border: none;
   color: var(--color-text-muted, #566E8D);
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  padding: 0.2rem;
+  padding: 0.15rem;
   cursor: pointer;
   transition: color 0.18s ease;
   outline: none;
@@ -3909,44 +3915,144 @@ canvas, svg {
   border-radius: var(--radius-sm);
 }
 
-/* Mobile Responsive Optimization for Floating Popup Widget */
-@media (max-width: 575.98px) {
+/* ==========================================================================
+   Mobile & Tablet Responsive Positioning for Floating Donation Popup
+   - Bottom center horizontally with equal spacing on left & right
+   - Compact height & width; does not dominate the viewport
+   - Respects mobile safe areas (iOS home indicator / browser bars)
+   ========================================================================== */
+@media (max-width: 767.98px) {
   .meo-modal-backdrop {
+    left: 16px;
+    right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 32px);
+    max-width: 320px;
+    bottom: max(14px, env(safe-area-inset-bottom, 14px));
+    transform: translateY(16px) scale(0.96);
+  }
+
+  .meo-modal-backdrop.is-open {
+    transform: translateY(0) scale(1);
+  }
+
+  .meo-modal-dialog {
+    border-radius: 16px;
+    box-shadow: 0 12px 36px -6px rgba(7, 29, 59, 0.32),
+                0 4px 12px -2px rgba(7, 29, 59, 0.16),
+                0 0 0 1px rgba(11, 45, 92, 0.1);
+  }
+
+  .meo-modal-close-btn {
+    top: 8px;
     right: 8px;
-    left: 8px;
-    max-width: calc(100vw - 16px);
-    bottom: 12px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
   }
+
   .meo-modal-img-wrap {
-    height: 65px;
+    height: 64px;
   }
+
   .meo-modal-floating-icon {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
-    bottom: -11px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+    bottom: -10px;
+    border-width: 2px;
   }
+
   .meo-modal-body {
-    padding: 0.85rem 0.9rem 0.9rem;
+    padding: 0.75rem 0.85rem 0.8rem;
   }
-  .meo-modal-heading {
-    font-size: 0.95rem;
-  }
-  .meo-modal-text {
-    font-size: 0.74rem;
-    margin-bottom: 0.55rem;
-  }
-  .meo-modal-highlights {
-    margin-bottom: 0.6rem;
+
+  .meo-modal-pill {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.55rem;
+    margin-bottom: 0.35rem;
     gap: 0.25rem;
   }
-  .meo-modal-highlights .highlight-chip {
-    font-size: 0.68rem;
-    padding: 0.18rem 0.45rem;
+
+  .meo-modal-heading {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
   }
+
+  .meo-modal-text {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-bottom: 0.45rem;
+  }
+
+  .meo-modal-highlights {
+    margin-bottom: 0.5rem;
+    gap: 0.25rem;
+  }
+
+  .meo-modal-highlights .highlight-chip {
+    font-size: 0.66rem;
+    padding: 0.15rem 0.45rem;
+    gap: 0.25rem;
+  }
+
+  .meo-modal-actions {
+    gap: 0.35rem;
+  }
+
   .btn-meo-donate-modal {
-    padding: 0.52rem 1rem;
-    font-size: 0.83rem;
+    padding: 0.48rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-meo-later {
+    font-size: 0.72rem;
+    padding: 0.15rem;
+  }
+}
+
+/* Extra small mobile screens (e.g. 320px–375px) */
+@media (max-width: 375px) {
+  .meo-modal-backdrop {
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    max-width: 290px;
+    bottom: max(10px, env(safe-area-inset-bottom, 10px));
+  }
+
+  .meo-modal-img-wrap {
+    height: 54px;
+  }
+
+  .meo-modal-body {
+    padding: 0.65rem 0.75rem 0.7rem;
+  }
+
+  .meo-modal-heading {
+    font-size: 0.88rem;
+  }
+
+  .meo-modal-text {
+    font-size: 0.68rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .meo-modal-highlights {
+    margin-bottom: 0.4rem;
+  }
+
+  .meo-modal-highlights .highlight-chip {
+    font-size: 0.62rem;
+    padding: 0.12rem 0.38rem;
+  }
+
+  .btn-meo-donate-modal {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.78rem;
   }
 }
 
@@ -4315,47 +4421,6 @@ img {
     overflow-wrap: break-word !important;
     white-space: normal !important;
   }
-
-  /* Floating Popup Widget — small mobile adjustments (already covered above) */
-  .meo-modal-backdrop {
-    right: 8px;
-    left: 8px;
-    max-width: calc(100vw - 16px);
-    bottom: 76px;
-  }
-  .meo-modal-dialog {
-    border-radius: 14px;
-  }
-  .meo-modal-img-wrap {
-    height: 100px;
-    flex-shrink: 0;
-  }
-  .meo-modal-floating-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-    bottom: -12px;
-  }
-  .meo-modal-body {
-    padding: 1.1rem 0.9rem 1.15rem;
-  }
-  .meo-modal-heading {
-    font-size: 1.05rem;
-    line-height: 1.25;
-  }
-  .meo-modal-text {
-    font-size: 0.8rem;
-    line-height: 1.45;
-    margin-bottom: 0.7rem;
-  }
-  .meo-modal-highlights {
-    margin-bottom: 0.75rem;
-    gap: 0.28rem;
-  }
-  .meo-modal-highlights .highlight-chip {
-    font-size: 0.7rem;
-    padding: 0.18rem 0.48rem;
-  }
 }
 
 /* --- Breakpoint: Small Mobile (320px–375px) --- */
@@ -4405,20 +4470,5 @@ img {
   .btn-amount-preset {
     font-size: 0.82rem !important;
     padding: 0.45rem 0.35rem !important;
-  }
-  .meo-modal-img-wrap {
-    height: 90px;
-  }
-  .meo-modal-floating-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-    bottom: -10px;
-  }
-  .meo-modal-body {
-    padding: 0.9rem 0.7rem 1rem;
-  }
-  .meo-modal-heading {
-    font-size: 0.98rem;
   }
 }
