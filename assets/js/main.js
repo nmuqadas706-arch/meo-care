@@ -952,28 +952,20 @@ $(document).ready(function () {
 
 
   // ==========================================================================
-  // 12. Premium Center Donation Popup Modal Controller
-  // Exact Display & Dismissal Rules:
-  // 1. "Donate Now" button click:
-  //    - Saves permanent dismissal flag in localStorage (meo_care_donation_modal_dismissed)
-  //    - Never displays modal again on any page, reload, or return from donation page
-  // 2. Cross (×) button click:
-  //    - Closes modal immediately
-  //    - Does NOT save permanent dismissal flag
-  //    - Allows modal to appear again after 10 seconds of active browsing
-  // 3. "Maybe Later" button click:
-  //    - Closes modal immediately
-  //    - Does NOT save permanent dismissal flag
-  //    - Allows modal to appear again after 10 seconds of active browsing
-  // 4. Website-wide consistency:
-  //    - Checked on every page before timer starts or modal displays
-  //    - Only "Donate Now" permanently suppresses the modal
-  //    - Design, animations, and responsive layout remain 100% intact
+  // 12. Premium Floating Donation Popup Controller (Bottom-Right Corner)
+  // No overlay, no backdrop, no page blocking.
+  // Display Rules:
+  // 1. Never displayed on donate.html — stops immediately on that page.
+  // 2. "Donate Now" click: marks session as dismissed, navigates to donate.html.
+  // 3. Close (×) or "Maybe Later": closes popup, reappears after INTERVAL_MS.
+  // 4. Pauses when tab is hidden or window is blurred.
+  // 5. Appears initially after INITIAL_DELAY_MS, then every INTERVAL_MS.
   // ==========================================================================
   function initDonationModal() {
     const MODAL_ID = 'meoDonationModal';
     const DISMISSED_KEY = 'meo_care_donation_modal_dismissed';
-    const INTERVAL_MS = 4000; // 4 seconds
+    const INITIAL_DELAY_MS = 15000; // 15 seconds before first appearance
+    const INTERVAL_MS = 15000;      // 15 seconds between reappearances after dismiss
 
     // 1. Storage Helpers — uses sessionStorage so dismissal resets each new browser session
     function isPermanentlyDismissed() {
@@ -992,7 +984,13 @@ $(document).ready(function () {
       } catch (err) {}
     }
 
-    // 2. If user already clicked "Donate Now" previously, never display or start timers
+    // 2. Never show on the donation page — suppress entirely
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if (currentPage === 'donate.html' || currentPage.includes('donate')) {
+      return;
+    }
+
+    // 3. If user already clicked "Donate Now" previously, never display or start timers
     if (isPermanentlyDismissed()) {
       return;
     }
@@ -1001,7 +999,7 @@ $(document).ready(function () {
     let $modal = $('#' + MODAL_ID);
     if (!$modal.length) {
       const modalHtml = `
-        <div id="${MODAL_ID}" class="meo-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="meoModalTitle" aria-describedby="meoModalDesc" style="display: none;">
+        <div id="${MODAL_ID}" class="meo-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="meoModalTitle" aria-describedby="meoModalDesc" style="display: block;">
           <div class="meo-modal-dialog">
             <div class="meo-modal-rainbow-bar"></div>
             <button type="button" class="meo-modal-close-btn" id="meoModalCloseBtn" aria-label="Close donation popup">
@@ -1058,7 +1056,7 @@ $(document).ready(function () {
     }
 
     let popupTimer = null;
-    let remainingTime = INTERVAL_MS;
+    let remainingTime = INITIAL_DELAY_MS;
     let lastStartTime = 0;
     let isOpen = false;
     let previousActiveElement = null;
@@ -1078,21 +1076,11 @@ $(document).ready(function () {
       popupTimer = null;
       previousActiveElement = document.activeElement;
 
-      $modal.css('display', 'flex');
-      // Trigger reflow for smooth scale/fade CSS transition
-      void $modal[0].offsetWidth;
       $modal.addClass('is-open');
-
-      // Accessibility: focus Donate Now button
-      setTimeout(function () {
-        const $donateBtn = $('#meoModalDonateBtn');
-        if ($donateBtn.length) {
-          $donateBtn.focus();
-        }
-      }, 60);
+      $modal.attr('aria-hidden', 'false');
     }
 
-    // Temporary close (used by Cross button, Maybe Later, Backdrop, Escape)
+    // Temporary close (used by Close button, Maybe Later, Escape)
     function closeModalTemporary() {
       if (!isOpen) return;
       isOpen = false;
@@ -1100,11 +1088,7 @@ $(document).ready(function () {
       popupTimer = null;
 
       $modal.removeClass('is-open');
-      setTimeout(function () {
-        if (!isOpen) {
-          $modal.css('display', 'none');
-        }
-      }, 360);
+      $modal.attr('aria-hidden', 'true');
 
       // Restore user focus
       if (previousActiveElement && typeof previousActiveElement.focus === 'function') {
@@ -1113,7 +1097,7 @@ $(document).ready(function () {
         } catch (err) {}
       }
 
-      // Allow modal to appear again after existing 10-second delay (if not permanently dismissed)
+      // Allow modal to appear again after INTERVAL_MS
       if (!isPermanentlyDismissed()) {
         startTimer(INTERVAL_MS);
       }
@@ -1125,7 +1109,8 @@ $(document).ready(function () {
       isOpen = false;
       clearTimeout(popupTimer);
       popupTimer = null;
-      $modal.removeClass('is-open').css('display', 'none');
+      $modal.removeClass('is-open');
+      $modal.attr('aria-hidden', 'true');
     }
 
     function startTimer(duration) {
@@ -1163,13 +1148,13 @@ $(document).ready(function () {
       }
     }
 
-    // 1. Cross (×) button: Close immediately, do NOT save permanent dismissal, reappear after 10s
+    // 1. Cross (×) button: Close immediately, do NOT save permanent dismissal, reappear after interval
     $(document).on('click', '#meoModalCloseBtn', function (e) {
       e.preventDefault();
       closeModalTemporary();
     });
 
-    // 2. "Maybe Later" button: Close immediately, do NOT save permanent dismissal, reappear after 10s
+    // 2. "Maybe Later" button: Close immediately, do NOT save permanent dismissal, reappear after interval
     $(document).on('click', '#meoModalLaterBtn', function (e) {
       e.preventDefault();
       closeModalTemporary();
@@ -1189,14 +1174,7 @@ $(document).ready(function () {
       }
     });
 
-    // 4. Click outside dialog on backdrop: Closes temporarily, reappears after 10s
-    $modal.on('click', function (e) {
-      if ($(e.target).closest('.meo-modal-dialog').length === 0) {
-        closeModalTemporary();
-      }
-    });
-
-    // 5. Escape key: Closes temporarily, reappears after 10s
+    // 4. Escape key: Closes temporarily, reappears after interval
     $(document).on('keydown', function (e) {
       if (isOpen && (e.key === 'Escape' || e.keyCode === 27)) {
         e.preventDefault();
@@ -1204,7 +1182,7 @@ $(document).ready(function () {
       }
     });
 
-    // 6. Tab visibility pause / resume
+    // 5. Tab visibility pause / resume
     document.addEventListener('visibilitychange', function () {
       if (isPermanentlyDismissed()) return;
       if (document.hidden) {
@@ -1214,7 +1192,7 @@ $(document).ready(function () {
       }
     });
 
-    // 7. Window blur & focus
+    // 6. Window blur & focus
     window.addEventListener('blur', function () {
       if (!isPermanentlyDismissed()) pauseTimer();
     });
@@ -1222,23 +1200,21 @@ $(document).ready(function () {
       if (!isPermanentlyDismissed()) resumeTimer();
     });
 
-    // 8. Cross-tab synchronization — sessionStorage is tab-local, no cross-tab sync needed
-    // (Removed: was localStorage-based, no longer applicable)
-
-    // 9. Back/Forward Cache (bfcache) navigation handling
+    // 7. Back/Forward Cache (bfcache) navigation handling
     window.addEventListener('pageshow', function (e) {
       if (isPermanentlyDismissed()) {
         clearTimeout(popupTimer);
         popupTimer = null;
         if (isOpen) {
-          $modal.removeClass('is-open').css('display', 'none');
+          $modal.removeClass('is-open');
+          $modal.attr('aria-hidden', 'true');
           isOpen = false;
         }
       }
     });
 
-    // Initial 10-second delay for visitors
-    startTimer(INTERVAL_MS);
+    // Initial delay before first appearance
+    startTimer(INITIAL_DELAY_MS);
   }
 
   initDonationModal();
